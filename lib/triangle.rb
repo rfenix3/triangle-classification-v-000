@@ -16,7 +16,6 @@ class Triangle
       end
     else
     
-    
       if (@side1 == @side2) && (@side2 == @side3)
         :equilateral
       else
@@ -31,9 +30,11 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    # def message 
-    #   "you must give the get_married method an argument of an instance of the person class!"
-    # end
+    def message 
+      "you must give the get_married method an argument of an instance of the person class!"
+    end
   end
 
 end
+
+
