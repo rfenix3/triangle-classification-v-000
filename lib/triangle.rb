@@ -8,7 +8,7 @@ class Triangle
   end
   
   def kind
-    if (@side1 == 0 || @side2 == 0) || @side3 == 0
+    if (@side1 <= 0 || @side2 <= 0) || @side3 <= 0
       begin
         raise TriangleError
       rescue TriangleError => error
@@ -31,9 +31,9 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    def message 
-      "you must give the get_married method an argument of an instance of the person class!"
-    end
+    # def message 
+    #   "you must give the get_married method an argument of an instance of the person class!"
+    # end
   end
 
 end
